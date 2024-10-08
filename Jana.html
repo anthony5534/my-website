@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony's World | Innovative Design</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #f5f5f5;
+            margin: 0;
+            background-color: #121212;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: #1f1f1f;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f5f5f5;
+            font-weight: 500;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1e90ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: url('https://example.com/hero-image-dark.jpg'); /* Replace with your dark-themed image */
+            background-size: cover;
+            background-position: center;
+            color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            background-color: #1e90ff;
+            color: #121212;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #1c86ee;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f5f5f5;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin: 20px auto;
+            max-width: 800px;
+            color: #d3d3d3;
+        }
+
+        .section-dark {
+            background-color: #1f1f1f;
+        }
+
+        /* Product Cards */
+        .product-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 60px 20px;
+        }
+
+        .product-card {
+            background-color: #2c2c2c;
+            width: 300px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+            color: #f5f5f5;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #b0b0b0;
+        }
+
+        .product-card a {
+            display: block;
+            margin-top: 15px;
+            background-color: #1e90ff;
+            color: #121212;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .product-card a:hover {
+            background-color: #1c86ee;
+        }
+
+        /* Contact Section */
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #2c2c2c;
+            color: #f5f5f5;
+            font-size: 1rem;
+        }
+
+        #contact button {
+            background-color: #1e90ff;
+            color: #121212;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #contact button:hover {
+            background-color: #1c86ee;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #121212;
+            color: #f5f5f5;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+            }
+
+            .product-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero" id="home">
+        <h1>Discover Innovation</h1>
+        <p>Where technology meets simplicity</p>
+        <a href="#products">Explore Products</a>
+    </div>
+
+    <section id="about">
+        <h2>About Anthony</h2>
+        <p>Anthony is a creative mind with a passion for designing sleek and innovative products that push the boundaries of what’s possible.</p>
+    </section>
+
+    <section id="products" class="section-dark">
+        <h2>Our Products</h2>
+        <div class="product-section">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://example.com/product1-dark.jpg" alt="Product 1"> <!-- Replace with real product image -->
+                <h3>Product 1</h3>
+                <p>This is an innovative product that offers cutting-edge technology.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://example.com/product2-dark.jpg" alt="Product 2"> <!-- Replace with real product image -->
+                <h3>Product 2</h3>
+                <p>This product is designed to make your life easier and more efficient.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://example.com/product3-dark.jpg" alt="Product 3"> <!-- Replace with real product image -->
+                <h3>Product 3</h3>
+                <p>A sleek, modern product that combines style and functionality.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-dark">
+        <h2>Contact Anthony</h2>
+        <p>Have a question or want to collaborate? Reach out to me anytime through the form below, and let’s create something amazing together.</p>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anthony's World. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
